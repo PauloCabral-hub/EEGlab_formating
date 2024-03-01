@@ -24,7 +24,7 @@ EEG.filecontent = '';
 % Overwritting events
 triggers = find(Data(:,21)~=0);
 event_num = length(triggers);
-event_alt = EEG.event;
+event_alt = struct;
 
 for a = 1:event_num
     event_alt(a).type = num2str(Data(triggers(a),21));
